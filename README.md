@@ -75,6 +75,7 @@ Tous les boutons mènent aux sections :
 - ✓ Navigation fixe avec détection de section active
 - ✓ Carrousel automatique sur la page d'accueil
 - ✓ Filtres de projets par catégorie
+- ✓ Chargement progressif des projets (Bouton "Voir plus")
 - ✓ Modal détaillée pour chaque projet
 - ✓ Formulaire de contact fonctionnel
 - ✓ Design responsive (mobile, tablette, desktop)

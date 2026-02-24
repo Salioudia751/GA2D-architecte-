@@ -524,6 +524,7 @@ const ProjectsSection = () => {
   const [filter, setFilter] = useState('tous');
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [modalImageIndex, setModalImageIndex] = useState(0);
+  const [visibleCount, setVisibleCount] = useState(6);
 
   const categories = [
     { id: 'tous', label: 'Tous les projets' },
@@ -551,13 +552,13 @@ const ProjectsSection = () => {
       "description": "Le projet de CRMN n’est pas un bâtiment. Il est le support étudié pour un programme d’appui et d’apprentissage de technologies de pointe destiné à for...",
       "gallery": [
         "/assets/VUE-1-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/VUE-2-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/VUE-3-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/PLAN-1-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/DETAIL-1-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/DETAIL-2-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/DETAIL-3-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/DETAIL-4-scaled.jpg"
+        "/assets/VUE-2-scaled.jpg",
+        "/assets/VUE-3-scaled.jpg",
+        "/assets/PLAN-1-scaled.jpg",
+        "/assets/DETAIL-1-scaled.jpg",
+        "/assets/DETAIL-2-scaled.jpg",
+        "/assets/DETAIL-3-scaled.jpg",
+        "/assets/DETAIL-4-scaled.jpg"
       ],
       "fullDescription": "Le projet de CRMN n’est pas un bâtiment. Il est le support étudié pour un programme d’appui et d’apprentissage de technologies de pointe destiné à former et aider les futurs talents et entreprises qui marqueront le paysage technologique et économique du Sénégal. C’est pourquoi le CRMN a été pensé comme une expérience sociale et spatiale avant tout.\n\nPar son implantation le CRMN se définit comme un outil de la ville de demain. Il offre des espaces publics riches et variés en s’inscrivant dans les parcours citadins du quotidien entre parc et centre-ville. Le CRMN ne s’oppose pas au quartier tout au contraire il s’expose. Il s’ouvre largement sur le quartier. Il se veut vitrine de l’apprentissage des technologies de pointe ainsi que de la construction bioclimatique à l’aide de la ressource terre.\n\nLe CRMN n’exclut personne, mais s’intègre et se fond dans le quartier. Les habitants y sont invités afin d’y profiter de conférences ainsi que du restaurant et des structures récréatives. Ils pourront en même temps y partager des expériences spatiales riches et être sensibilisés aux technologies du futur ainsi qu’au bioclimatisme.\n\nLe CRMN est une structure d’accueil, de partage du savoir et d’expériences. Sa flexibilité spatiale se reflète dans les modes d’usage où travail et détente se mélangent en favorisant l’échange, la créativité et la productivité. L’extrême flexibilité dont il est doté en fait l’outil parfait pour servir les besoins actuels et muter vers les exigences futures.",
       "subtitle": "Conception d'un centre de référence de haute qualité environnementale dans les métiers du numérique (CRMN)",
@@ -576,9 +577,9 @@ const ProjectsSection = () => {
       "description": "Classée au Patrimoine mondial de l'UNESCO, la cathédrale de Saint Louis, première église catholique edifiée en Afrique de l'ouest en 1827, présentait ...",
       "gallery": [
         "/assets/CATHEDRALE-DE-SAINT-LOUIS-4.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_4305_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/CATHEDRALE-DE-SAINT-LOUIS-2.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/FSSZ9180_16.9.jpg"
+        "/assets/IMG_4305_16.9-scaled.jpg",
+        "/assets/CATHEDRALE-DE-SAINT-LOUIS-2.jpg",
+        "/assets/FSSZ9180_16.9.jpg"
       ],
       "fullDescription": "Classée au Patrimoine mondial de l'UNESCO, la cathédrale de Saint Louis, première église catholique edifiée en Afrique de l'ouest en 1827, présentait de nombreuses dégradations qui nécessitaient en urgence diverses interventions pour sauvegarder l'édifice et éviter tous risques de dangerosité pour les fidèles et visiteurs. Les travaux ont consisté en la consolidation de la structure, le traitement des remontées d'humidité, la réparation des zones dégradées, la réhabilitation de tous les vitraux, le remplacement des sols, le remplacement ou la création de menuiseries bois, le traitement des façades et toitures.",
       "subtitle": "Réhabilitation de la cathédrale\n\nMission complète de maîtrise d'œuvre intégrée à l'entreprise Eiffage",
@@ -597,8 +598,8 @@ const ProjectsSection = () => {
       "description": "Le projet se place dans un programme de réhabilitation de bâtiments classés dans l’île de Gorée. Cette réhabilitation a pour but aussi de mettre en pl...",
       "gallery": [
         "/assets/CENTRE-D-HEBERGEMENT-3.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/CENTRE-D-HEBERGEMENT-2.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/20140103_131539_16.9.jpg"
+        "/assets/CENTRE-D-HEBERGEMENT-2.jpg",
+        "/assets/20140103_131539_16.9.jpg"
       ],
       "fullDescription": "Le projet se place dans un programme de réhabilitation de bâtiments classés dans l’île de Gorée. Cette réhabilitation a pour but aussi de mettre en place des équipements nécessaires à l’amélioration de la vie des habitants de l’île. La création d’un centre d’hébergement entre dans ce programme.",
       "subtitle": "Réhabilitation d'un centre d'hébergement \n\nMission complète de maîtrise d'œuvre",
@@ -617,9 +618,9 @@ const ProjectsSection = () => {
       "description": "Situé au sein du centre national universitaire de Fann, un établissement hospitalier public, le projet consiste en l'extension du Centre Hospitalier d...",
       "gallery": [
         "/assets/VUE-4-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/VUE-3-1-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/VUE-5-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2021/04/VUE-1-1-scaled.jpg"
+        "/assets/VUE-3-1-scaled.jpg",
+        "/assets/VUE-5-scaled.jpg",
+        "/assets/VUE-1-1-scaled.jpg"
       ],
       "fullDescription": "Situé au sein du centre national universitaire de Fann, un établissement hospitalier public, le projet consiste en l'extension du Centre Hospitalier de l'Ordre de Malte existant en vue d'accueillir de nouvelles activités, à savoir la kinésithérapie et la radiologie. Le bâtiment se caractérise par une galerie qui permet de circuler entre les différentes activités, cette galerie ombragée permet de reduire concretement la surchauffe du bâtiment.",
       "subtitle": "Construction d'une extension du centre hospitalier de l'ordre de Malte (Kinésithérapie - Radiologie)\n\nMission complète de maîtrise d'œuvre",
@@ -638,8 +639,8 @@ const ProjectsSection = () => {
       "description": "En 2007, GA2D collabore avec CFAO Sénégal en participant comme maitre d'œuvre d'opération, à son projet de concession neuve Toyota Yamaha (site 02), c...",
       "gallery": [
         "/assets/IMG_0624-Copie_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/CFAO-Sénégal-05_16.9-2.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/CFAO-Sénégal-02_16.9-2.jpg"
+        "/assets/CFAO-Sénégal-05_16.9-2.jpg",
+        "/assets/CFAO-Sénégal-02_16.9-2.jpg"
       ],
       "fullDescription": "En 2007, GA2D collabore avec CFAO Sénégal en participant comme maitre d'œuvre d'opération, à son projet de concession neuve Toyota Yamaha (site 02), comprenant showroom et ateliers. Puis, en 2012, GA2D réitère sa participation au projet de concession Peugeot Suzuki. Depuis, GA2D a accompagné CFAO dans divers projets d'aménagement pour CFAO Truck en 2015 et CFAO Equipement en 2016.",
       "subtitle": "Constructions de concessions automobiles et motos pour le distributeur CFAO\n\nPeugeot Suzuki pour site 01 et Toyota Yamaha sur site 02\n\nMission de maîtrise d'œuvre d'opération",
@@ -658,10 +659,10 @@ const ProjectsSection = () => {
       "description": "L’église de Nianing se démarque de son environnement bâti par sa forme sculpturale étonnante qui rappelle celle d’un coquillage. Son volume se décompo...",
       "gallery": [
         "/assets/EGLISE-NIANING-3_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/EGLISE-NIANING-4-1-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/EGLISE-NIANING-2-1-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/EGLISE-NIANING-5_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/EGLISE-NIANING-1_16.9-scaled.jpg"
+        "/assets/EGLISE-NIANING-4-1-scaled.jpg",
+        "/assets/EGLISE-NIANING-2-1-scaled.jpg",
+        "/assets/EGLISE-NIANING-5_16.9-scaled.jpg",
+        "/assets/EGLISE-NIANING-1_16.9-scaled.jpg"
       ],
       "fullDescription": "L’église de Nianing se démarque de son environnement bâti par sa forme sculpturale étonnante qui rappelle celle d’un coquillage. Son volume se décompose en sept voûtes avec un clocher qui culmine à 45 mètres et qui joue le rôle, à la fois de signal, et de cheminée de ventilation. L’intérieur laissé en béton brut de décoffrage se veut sobre et minimaliste.",
       "subtitle": "Construction d'une Eglise\n\nMission de suivi de l’exécution du chantier",
@@ -680,7 +681,7 @@ const ProjectsSection = () => {
       "description": "La future église Saint Paul s’organise sur trois niveaux dont un niveau de sous-sol accueillant le parking. Sa forme en coquillage et son large parvis...",
       "gallery": [
         "/assets/SITE-SAINT-PAUL-1_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/SITE-SAINT-PAUL-2_16.9.jpg"
+        "/assets/SITE-SAINT-PAUL-2_16.9.jpg"
       ],
       "fullDescription": "La future église Saint Paul s’organise sur trois niveaux dont un niveau de sous-sol accueillant le parking. Sa forme en coquillage et son large parvis dégagé ouvrent l’accès à un grand nombre de fidèles. Au total, l’église pourra accueillir 5000 personnes assises réparties entre espaces extérieurs et intérieurs.",
       "subtitle": "Construction d'une Eglise\n\nMission complète de maîtrise d'œuvre",
@@ -699,15 +700,15 @@ const ProjectsSection = () => {
       "description": "Dans le cadre de la création de la nouvelle ligne de TER entre Dakar et Diamniadio, GA2D a été choisi pour mener la réhabilitation de la gare de Dakar...",
       "gallery": [
         "/assets/46021825744_7099db0cb3_o_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/20190331_113126_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/20190331_113217_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/46746619531_6e4fe32cc6_o_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/P1050225_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/P1050242_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/P1050247_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/P1050251_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/P1050258_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/P1050261_16.9-scaled.jpg"
+        "/assets/20190331_113126_16.9-scaled.jpg",
+        "/assets/20190331_113217_16.9-scaled.jpg",
+        "/assets/46746619531_6e4fe32cc6_o_16.9.jpg",
+        "/assets/P1050225_16.9-scaled.jpg",
+        "/assets/P1050242_16.9-scaled.jpg",
+        "/assets/P1050247_16.9-scaled.jpg",
+        "/assets/P1050251_16.9-scaled.jpg",
+        "/assets/P1050258_16.9-scaled.jpg",
+        "/assets/P1050261_16.9-scaled.jpg"
       ],
       "fullDescription": "Dans le cadre de la création de la nouvelle ligne de TER entre Dakar et Diamniadio, GA2D a été choisi pour mener la réhabilitation de la gare de Dakar, monument historique datant de 1914. Le projet consiste en la stabilisation et la modernisation du bâtiment existant, la création d’un bâtiment neuf et la restructuration des espaces extérieurs environnants. La gare en question se situe au Nord de la place du Tirailleur, elle est dotée d’un plan en U avec un volume central sur toute la hauteur qui relie les deux ailes, plus hautes et divisées en trois niveaux. L’extension, à l’architecture contemporaine, se situe en continuité de la gare historique. Elle crée le lien entre le bâtiment historique et l’accès aux trains.",
       "subtitle": "Réhabilitation et extension de la gare, \n\nMission complète en conception construction",
@@ -726,9 +727,9 @@ const ProjectsSection = () => {
       "description": "Dans le cadre de la création de la nouvelle ligne de TER entre Dakar et Diamniadio, GA2D a été choisi pour mener la réhabilitation de la gare de Rufis...",
       "gallery": [
         "/assets/RUFISQUE-4_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/RUFISQUE-3_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/RUFISQUE-2_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/04/PHOTO-2020-05-28-11-55-23_16.9.jpg"
+        "/assets/RUFISQUE-3_16.9-scaled.jpg",
+        "/assets/RUFISQUE-2_16.9-scaled.jpg",
+        "/assets/PHOTO-2020-05-28-11-55-23_16.9.jpg"
       ],
       "fullDescription": "Dans le cadre de la création de la nouvelle ligne de TER entre Dakar et Diamniadio, GA2D a été choisi pour mener la réhabilitation de la gare de Rufisque, monument historique datant de la fin du XIXème siècle. Le projet consiste en la stabilisation et la modernisation du bâtiment existant, la création d’un bâtiment neuf et la restructuration des espaces extérieurs environnants. Le bâtiment existant est composé d’un corps principal rectangulaire en maçonnerie sur 2 niveaux et est situé le long des voies existantes, en retrait par rapport à la rue qui le dessert. Ce bâtiment est entouré d’une coursive qui assure la distribution des différents espaces au rdc et r+1. Le bâtiment neuf est, quant à lui, construit sur un seul niveau. Il prolonge le bâtiment existant côté Est, tout en en étant, physiquement, clairement détaché. Par l’utilisation du même vocabulaire architectural (trame, dessin des ouvertures, toiture débordante), il dialogue avec son voisin tout en marquant puissamment son esthétique contemporaine.",
       "subtitle": "Réhabilitation et extension de la gare, \n\nMission complète en conception construction",
@@ -747,8 +748,8 @@ const ProjectsSection = () => {
       "description": "Le projet consiste en la construction d’une usine de biofertilisants sur une parcelle d’environ 69 000 m² dans la région de Thies. Le site a été aména...",
       "gallery": [
         "/assets/Image-02_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/Image-09_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/Image-01_16.9-scaled.jpg"
+        "/assets/Image-09_16.9-scaled.jpg",
+        "/assets/Image-01_16.9-scaled.jpg"
       ],
       "fullDescription": "Le projet consiste en la construction d’une usine de biofertilisants sur une parcelle d’environ 69 000 m² dans la région de Thies. Le site a été aménagé de manière à organiser de façon optimale les rapports entre les différentes fonctions de l’usine tout en s’intégrant au mieux dans son environnement climatique et paysager. La gestion des flux, des nuisances et des échanges ont été les points focal du traitement architectural. Une ceinture verte, composée de grands arbres aux racines profondes, a été aménagée sur le site pour faire barrage aux vents de sable et au soleil.",
       "subtitle": "Construction d'une usine de bio fertilisants\n\nMission complète de maîtrise d'œuvre",
@@ -767,7 +768,7 @@ const ProjectsSection = () => {
       "description": "La présente opération s’inscrit dans le cadre de la réalisation de la nouvelle ligne de TER DAKAR-AIBD, initiée par le Ministère des Infrastructures, ...",
       "gallery": [
         "/assets/IMG_6061_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_6817_16.9-scaled.jpg"
+        "/assets/IMG_6817_16.9-scaled.jpg"
       ],
       "fullDescription": "La présente opération s’inscrit dans le cadre de la réalisation de la nouvelle ligne de TER DAKAR-AIBD, initiée par le Ministère des Infrastructures, des Transports Terrestres et du Désenclavement dont la maîtrise d'ouvrage déléguée est assurée par l'APIX. Ce grand projet d’infrastructure comprend 14 arrêts regroupés selon trois typologies qui correspondent à leurs tailles et aux services qui leurs sont associées. Ces trois typologies sont la halte, la gare moyenne et la gare multimodale. L’architecture des haltes et gares répond aux enjeux suivants: accueillir les programmes liés à la ligne de TER, assurer un confort thermique optimal aux utilisateurs, exploiter et réguler les apports solaires et utiliser une écriture architecturale sobre et homogène.\n\nPour répondre à ces objectifs, plusieurs typologies de haltes ont été conçues. Les bâtiments sont composés de deux parois séparées par une lame d’air ventilée, la paroi extérieure est en BTC (Brique de Terre Compressée) et la paroi intérieure est en parpaing de ciment. Chaque bâtiment est constitué d’un volume, abrité du soleil et des intempéries par une toiture-parapluie à la structure autonome. Ce principe de dissociation entre bâti et couverture autorise une toiture ample, à large débords, s’adaptant aux différentes typologies de halte, protégeant de manière optimale le bâti maçonné et prodiguant ombre et fraicheurs au public. Cette dissociation se traduit par une surélévation de la toiture par rapport au bâtiment. Cela permet une bonne ventilation de cet entre-deux et participe au confort thermique des usagers. L’architecture des bâtiments tend à profiter au maximum de la lumière naturelle tout en se protégeant des rayons solaires directs.",
       "subtitle": "Construction des haltes et gares de la ligne de TER Dakar - Diamniadio\n\nMission conception architecturale et VISA architecturaux",
@@ -786,7 +787,7 @@ const ProjectsSection = () => {
       "description": "Située sur un terrain traversant entre deux rues calmes du quartier de Ouakam, la résidence est implantée à l'alignement d'un immeuble R+2 d'un côté e...",
       "gallery": [
         "/assets/IMMEUBLE-AL-1.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMMEUBLE-AL-2.jpg"
+        "/assets/IMMEUBLE-AL-2.jpg"
       ],
       "fullDescription": "Située sur un terrain traversant entre deux rues calmes du quartier de Ouakam, la résidence est implantée à l'alignement d'un immeuble R+2 d'un côté et d'un R+3 de l'autre, créant une cour et un jardin intérieur. Une voie traversante permet d'accéder, d'un coté à un parking privé et de l'autre à un escalier et à un ascenseur au milieu d'un jardin distribuant les coursives d'accès aux sept appartements. La toiture terrasse est accessible à tous les occupants de la résidence.",
       "subtitle": "Construction d'un immeuble d'habitation R+2\n\nMission complète de maîtrise d'œuvre",
@@ -805,9 +806,9 @@ const ProjectsSection = () => {
       "description": "Situé dans le quartier des Almadies, la résidence comporte 5 niveaux sur un sous sol. Elle organise trois appartements F4 autour d'une platforme génér...",
       "gallery": [
         "/assets/Protection-palliers-scaled.jpeg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_4533_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_5238_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_5239_16.9-scaled.jpg"
+        "/assets/IMG_4533_16.9-scaled.jpg",
+        "/assets/IMG_5238_16.9-scaled.jpg",
+        "/assets/IMG_5239_16.9-scaled.jpg"
       ],
       "fullDescription": "Situé dans le quartier des Almadies, la résidence comporte 5 niveaux sur un sous sol. Elle organise trois appartements F4 autour d'une platforme généreuse et ouverte sur l'extérieur offrant un espace de convivialité et distribuant les circulations verticales. Les espaces communs sont situés en RDC (locaux vélos, poubelles, entretien et vestiaires pour le personnel) et en toiture terrasse avec des boxes étendoirs. Chaque appartement possède une cave privée et une ou deux places de parking. la résidence offre 14 appartements dont certains possèdent un espace privé extérieur",
       "subtitle": "Construction d'un immeuble d'habitation R+5 + sous-sol\n\nMission complète de maîtrise d'œuvre",
@@ -826,9 +827,9 @@ const ProjectsSection = () => {
       "description": "L’immeuble, destiné à un usage mixte, comprend un parking en sous-sol, un hall, des bureaux et locaux commerciaux en rez-de-chaussée et des appartemen...",
       "gallery": [
         "/assets/P1040858_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/P1040861-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/P1040856_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/P1040859_16.9-scaled.jpg"
+        "/assets/P1040861-scaled.jpg",
+        "/assets/P1040856_16.9-scaled.jpg",
+        "/assets/P1040859_16.9-scaled.jpg"
       ],
       "fullDescription": "L’immeuble, destiné à un usage mixte, comprend un parking en sous-sol, un hall, des bureaux et locaux commerciaux en rez-de-chaussée et des appartements F2, F3 et F4 sur cinq niveaux. Chaque appartement possède un espace extérieur sous forme de balcon ou de loggia. En toiture une grande terrasse accessible à tous est aménagée.",
       "subtitle": "Construction d'un immeuble d'habitation R+6\n\nMission complète de maîtrise d'œuvre",
@@ -847,8 +848,8 @@ const ProjectsSection = () => {
       "description": "Grace à la persévérance de La Chaîne de l'Espoir, le premier centre cardio-pédiatrique d'Afrique de l'ouest a pu voir le jour au centre hospitalier de...",
       "gallery": [
         "/assets/IMG_1675-2.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_3270_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_3269_16.9-scaled.jpg"
+        "/assets/IMG_3270_16.9-scaled.jpg",
+        "/assets/IMG_3269_16.9-scaled.jpg"
       ],
       "fullDescription": "Grace à la persévérance de La Chaîne de l'Espoir, le premier centre cardio-pédiatrique d'Afrique de l'ouest a pu voir le jour au centre hospitalier de Fann. Ce centre, construit sur un seul niveau, est juxtaposé au centre de cardiologie de l'hôpital de Fann. Ses différents services de consultation, administration, plateau technique et hospitalisation, s'organisent autour d'un patio central végétalisé. Il permet de dissocier les circulations, faire pénétrer la lumière et la ventilation naturelle. Le plateau technique, composé de deux blocs opératoires et de 10 lits de réanimation, offre une capacité opérationnelle évitant désormais l'organisation de rapatriement d’enfants pour des opérations en Europe.",
       "subtitle": "Construction d'un institut cardio-pédiatrique\n\nMission complète de maîtrise d'œuvre",
@@ -867,7 +868,7 @@ const ProjectsSection = () => {
       "description": "Dans le cadre de l’aménagement du Nouveau Pôle urbain de Diamniadio, l’Institut Pasteur de Dakar aménage une unité de production de vaccin de la fièvr...",
       "gallery": [
         "/assets/Image-03_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/Image-01_16.9-1.jpg"
+        "/assets/Image-01_16.9-1.jpg"
       ],
       "fullDescription": "Dans le cadre de l’aménagement du Nouveau Pôle urbain de Diamniadio, l’Institut Pasteur de Dakar aménage une unité de production de vaccin de la fièvre jaune, sur un terrain d'une superficie d’environ 18000 m². L'ensemble du projet a été traité en fonction des vents dominants et de l’ensoleillement. Pour limiter l’échauffement des locaux, les bâtiments du site comportent une double paroi ventilée des murs exposés à l’ensoleillement. Cette ventilation rafraîchit la paroi intérieure et évite une accumulation et une compression de l’air chaud entre les murs. La protection des châssis vitrés par des brise-soleil en aluminium thermo laqué complètent le système de d’isolation thermique des murs et volumes intérieurs.",
       "subtitle": "Construction d'un centre de vaccins\n\nMission complète de maîtrise d'œuvre",
@@ -886,10 +887,10 @@ const ProjectsSection = () => {
       "description": "La cour du fleuve est un ancien comptoir colonial datant de la fin du XIXème siècle et situé en bordure du fleuve Sénégal. Né d'un coup de cœur collec...",
       "gallery": [
         "/assets/IMG_7714_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_7690_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_7715_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_7720_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/02-la-cour-2_16.9-2.jpg"
+        "/assets/IMG_7690_16.9-scaled.jpg",
+        "/assets/IMG_7715_16.9-scaled.jpg",
+        "/assets/IMG_7720_16.9-scaled.jpg",
+        "/assets/02-la-cour-2_16.9-2.jpg"
       ],
       "fullDescription": "La cour du fleuve est un ancien comptoir colonial datant de la fin du XIXème siècle et situé en bordure du fleuve Sénégal. Né d'un coup de cœur collectif, ce projet de réhabilitation a consisté à transformer le bâtiment en maison d'hôtes comprenant 7 chambres et une suite et offrant des espaces et terrasses généreuses. Le bâti s'oranise autour d'une cour centrale offrant un havre de paix et de fraicheur sous la végétation. Tous les enduits intérieurs et extérieurs ont été refait à la chaux, permettant aux murs composés de briques ou ou de terre de respirer. Les sols ont été habillés de carreaux de ciment teintés à la manière traditionnelle.",
       "subtitle": "Réhabilitation d'un ancien comptoir colonial (patrimoine classé) en maison d'hôtes\n\nMission complète de maîtrise d'œuvre",
@@ -908,7 +909,7 @@ const ProjectsSection = () => {
       "description": "Anciennes écuries de l’armée française pendant la période coloniale, cet édifice arrive là à son ultime mutation. Par ce projet, il s’agit de donner à...",
       "gallery": [
         "/assets/le-manege-03.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/le-manege-02.jpg"
+        "/assets/le-manege-02.jpg"
       ],
       "fullDescription": "Anciennes écuries de l’armée française pendant la période coloniale, cet édifice arrive là à son ultime mutation. Par ce projet, il s’agit de donner à ce bâtiment sans nom un acte de naissance officiel : Le Manège. Patrimoine, Renouveau, Mémoire, tels sont les mots qui caractérisent les enjeux de la transformation de ce bâtiment en une salle d’exposition.\n\nLa première phase du projet consiste en la restauration et le réaménagement du bâtiment historique pour créer de nouveaux espaces équipés des moyens techniques nécessaires au fonctionnement d’une salle d’exposition. Une nouvelle trame structurelle en poteaux métalliques vient soutenir la charpente historique et désolidariser les murs périphériques fragilisés. Cette nouvelle structure plus flexible permet de diversifier les moyens d’exposition. Cet espace offre alors une capacité de mutation et de perfectionnement indiscutable qui lui permettra certainement d’évoluer continuellement. La deuxième phase du projet repose sur l’intégration de la cour comme espace d’exposition pour former un ensemble uni, cohérent et fonctionnel composant une vision globale. Le Manège devient alors un espace culturel aux multiples facettes.",
       "subtitle": "Réhabilitation d'un ancien bâtiment de l'ambassade de France en salle d'exposition pour l'Institut Français\n\nMission complète de maîtrise d'œuvre",
@@ -927,9 +928,9 @@ const ProjectsSection = () => {
       "description": "La maison des enfants est située dans l’enceinte du CHNU Fann Dakar, un établissement hospitalier public. Elle est construite à proximité du nouveau s...",
       "gallery": [
         "/assets/MAISON-DES-ENFANTS-3_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/MAISON-DES-ENFANTS-4_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/MAISON-DES-ENFANTS-1_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/MAISON-DES-ENFANTS-2_16.9.jpg"
+        "/assets/MAISON-DES-ENFANTS-4_16.9-scaled.jpg",
+        "/assets/MAISON-DES-ENFANTS-1_16.9.jpg",
+        "/assets/MAISON-DES-ENFANTS-2_16.9.jpg"
       ],
       "fullDescription": "La maison des enfants est située dans l’enceinte du CHNU Fann Dakar, un établissement hospitalier public. Elle est construite à proximité du nouveau service de cardio-pédiatrie afin de faciliter les allers-retours des patients entre la structure sanitaire et leur lieu d’hébergement. Elle peut accueillir dix-huit enfants et leurs accompagnants dans cinq chambres partagées, disposées autour d’un patio central végétalisé. L’équipement propose également des espaces collectifs : cuisine, réfectoire et salle d’éveil dédiée aux activités pédagogiques. Aujourd’hui, la maison des enfants participe, à son échelle, à faire connaître l’utilisation de la construction en terre dans les cadres institutionnels.",
       "subtitle": "Construction d'un centre d'accueil de nuit pour les enfants hospitalisés en BTC (Briques de Terre Compressée)\n\nMission complète de maîtrise d'œuvre",
@@ -948,9 +949,9 @@ const ProjectsSection = () => {
       "description": "Le projet est situé sur l’île de Gorée au large de Dakar, que M. Amadou-Mahtar M'BOW, lorsqu’il était Directeur Général de l'Unesco décrivait ainsi : ...",
       "gallery": [
         "/assets/WhatsApp-Image-2020-09-03-at-12.15.42.jpg.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/20200107_112420_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/P1050208_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/WhatsApp-Image-2020-09-03-at-12.15.49.jpg"
+        "/assets/20200107_112420_16.9-scaled.jpg",
+        "/assets/P1050208_16.9-scaled.jpg",
+        "/assets/WhatsApp-Image-2020-09-03-at-12.15.49.jpg"
       ],
       "fullDescription": "Le projet est situé sur l’île de Gorée au large de Dakar, que M. Amadou-Mahtar M'BOW, lorsqu’il était Directeur Général de l'Unesco décrivait ainsi : « Gorée a préservé une cohérence architecturale qui réunit les apports culturels les plus dissemblables (nordiques et méditerranéens, islamiques et chrétiens) pour les fondre dans une unité dictée à la fois par l'exiguïté de l'espace, l'exposition aux vents du grand large et l'homogénéité du matériau de construction ». L’île est d’ailleurs inscrite sur la liste du Patrimoine Mondial de l’UNESCO depuis 1978. La Coalition Internationale des Sites de Conscience s’est engagée à soutenir l’effort de conservation et de valorisation de ce patrimoine exceptionnel que représentent la Maison des Esclaves et la Maison Victoria Albis. Les deux sites se font face d’un côté et de l’autre de la rue St Germain, ils seront réunis par un programme commun: la création d’un Centre International d’Interprétation et de Documentation de l’esclavage et des traites négrières. Vérandas, balcons en bois et colonnades, constituent dans leur ensemble un monument, soit comme symboles de la traite des esclaves, soit pour la richesse des couleurs et des styles. GA2D s’est investi pleinement dans ce projet en assurant le respect scrupuleux des règlements édictés pour la sauvegarde de l’île et de son architecture et en mettant en œuvre des solutions adaptées aux pathologies locales (humidité, etc…).",
       "subtitle": "Réhabilitation de la maison des esclaves et de la maison Victoria Albis\n\nMission complète de maîtrise d'œuvre",
@@ -969,12 +970,12 @@ const ProjectsSection = () => {
       "description": "Le Musée des civilisations noires a entrepris en 2020 de sauver l’ancienne maison de l’amiral de Gorée en la réhabilitant pour la transformer en resta...",
       "gallery": [
         "/assets/P1050186_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/09/P1050115_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/09/P1050182_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/09/VUE-5_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/09/VUE-4_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/09/COUR_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/09/VUE-3_16.9-scaled.jpg"
+        "/assets/P1050115_16.9-scaled.jpg",
+        "/assets/P1050182_16.9-scaled.jpg",
+        "/assets/VUE-5_16.9.jpg",
+        "/assets/VUE-4_16.9.jpg",
+        "/assets/COUR_16.9-scaled.jpg",
+        "/assets/VUE-3_16.9-scaled.jpg"
       ],
       "fullDescription": "Le Musée des civilisations noires a entrepris en 2020 de sauver l’ancienne maison de l’amiral de Gorée en la réhabilitant pour la transformer en restaurant, lieu de séminaire et résidence d’artistes. Sa situation exceptionnelle et sa grande terrasse sur la mer en font un lieu ouvert propice aux échanges. Sa cour intérieure fraîche et ombragée offre une intimité précieuse à quelques minutes de la capitale.",
       "subtitle": "Réhabilitation de la maison de l'Amiral en restaurant, lieu de séminaire et résidence d'artistes \n\nMission complète de maîtrise d'œuvre",
@@ -993,9 +994,9 @@ const ProjectsSection = () => {
       "description": "La maison donnant sur la place du port de Gorée, remaniée au fil du temps, avait la particularité de posséder un grand vide en son centre, surchargé p...",
       "gallery": [
         "/assets/IMG_0208_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_0648_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_0209_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_0634-2-scaled-e1600765074884.jpg"
+        "/assets/IMG_0648_16.9-scaled.jpg",
+        "/assets/IMG_0209_16.9-scaled.jpg",
+        "/assets/IMG_0634-2-scaled-e1600765074884.jpg"
       ],
       "fullDescription": "La maison donnant sur la place du port de Gorée, remaniée au fil du temps, avait la particularité de posséder un grand vide en son centre, surchargé par différents volumes ajoutés. Ce dernier a été dégagé et mis en valeur par le déploiement d'escaliers et coursives en bois, distribuants des demi-niveaux. L'ensemble des enduits intérieurs ont été refait à la chaux mélangée à du sable blanc. Les sols du RDC sont en pierre et ceux des niveau supérieurs en bois. La réorganisation des espaces a permis d'ouvrir le séjour sur le jardin arrière, réaménagé pour l'occasion par des paysagistes (Indice D).",
       "subtitle": "Réhabilitation d'une maison en maison d'hôtes\n\nMission complète de maîtrise d'œuvre",
@@ -1014,8 +1015,8 @@ const ProjectsSection = () => {
       "description": "La maison accueille deux unités d’habitation : un duplex en RDC et R+1 et un appartement indépendant au R+2. Le volume du garage au RDC qui s’avance s...",
       "gallery": [
         "/assets/c_11-Photo_11-Photo_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/c_12-Photo_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/a_1-Photo.jpg"
+        "/assets/c_12-Photo_16.9.jpg",
+        "/assets/a_1-Photo.jpg"
       ],
       "fullDescription": "La maison accueille deux unités d’habitation : un duplex en RDC et R+1 et un appartement indépendant au R+2. Le volume du garage au RDC qui s’avance sur la rue sépare clairement les deux entrées et préserve l’indépendance des familles. Un jeu de claustra en façade protège les espaces intérieurs des rayons chauds du soleil et limite les vues directes pour garantir l’intimité des habitants.",
       "subtitle": "Construction d'une maison R+2\n\nMission complète de maîtrise d'œuvre",
@@ -1034,7 +1035,7 @@ const ProjectsSection = () => {
       "description": "Patrimoine historique de la ville de Dakar, cet édifice, inauguré en 1933 a subi les affres du temps. Conçu en béton armé et ravagé par un incendie en...",
       "gallery": [
         "/assets/EXTERIEUR_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/INTERIEUR_16.9-scaled.jpg"
+        "/assets/INTERIEUR_16.9-scaled.jpg"
       ],
       "fullDescription": "Patrimoine historique de la ville de Dakar, cet édifice, inauguré en 1933 a subi les affres du temps. Conçu en béton armé et ravagé par un incendie en 2013, sa structure est aujourd’hui très fragilisée et menace de s’effondrer. Il est donc urgent de penser un programme de réhabilitation complet de ce bâtiment inscrit au registre des monuments historiques du Sénégal. L’objectif du projet est de réactiver le marché et la parcelle Sandaga. Pour cela, le bâtiment historique sera réhabilité et retrouvera sa fonction initiale de « marché frais ». Le programme est issu de problématiques clés, essentielles à la constitution d’un projet à même de faire revivre pertinemment et dans la durée le marché Sandaga. En plus de la réhabilitation lourde du marché, le projet prévoit la construction d’un nouveau bâtiment à l’extrémité de la parcelle. Cette construction neuve permet de proposer d’avantage de surface commerciale tout en ancrant le monument existant dans l’époque actuelle par l’instauration d’un dialogue entre l’ancien et le nouveau. Le parvis qui relie les deux bâtiments est complètement requalifié et dégagé pour redonner l’espace aux piétons.",
       "subtitle": "Réhabilitation et extension du marché Sandaga\n\nConcours d'idée",
@@ -1071,7 +1072,7 @@ const ProjectsSection = () => {
       "description": "Le projet se place dans un programme de réhabilitation de bâtiments classés dans l’île de Gorée. Cette réhabilitation a pour but aussi de mettre en pl...",
       "gallery": [
         "/assets/DSC02161.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/ps-goree-01_16.9-2.jpg"
+        "/assets/ps-goree-01_16.9-2.jpg"
       ],
       "fullDescription": "Le projet se place dans un programme de réhabilitation de bâtiments classés dans l’île de Gorée. Cette réhabilitation a pour but aussi de mettre en place des équipements nécessaires à l’amélioration de la vie des habitants de l’île. La création d’un poste de santé entre dans ce programme. Le poste de santé est aménagé dans une maison R+1 située à l’angle de la rue Saint Germain et de la rue Boufflers, sur une parcelle de 293 m². La maison d’un étage, avec coursive traditionnelle intérieure, donne sur une cour autour de laquelle sont disposés quelques abris. L’ensemble était dans un état de dégradation avancé et a nécessité une réhabilitation rapide afin de préserver la construction.",
       "subtitle": "Réhabilitation d'une maison en poste de santé\n\nMission complète de maîtrise d'œuvre",
@@ -1090,10 +1091,10 @@ const ProjectsSection = () => {
       "description": "La présente opération s’inscrit dans le cadre de la réalisation de la nouvelle ligne de TER DAKAR-AIBD, initiée par le Ministère des Infrastructures, ...",
       "gallery": [
         "/assets/1_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_9418_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_9368_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_9414_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_9382_16.9-scaled.jpg"
+        "/assets/IMG_9418_16.9-scaled.jpg",
+        "/assets/IMG_9368_16.9-scaled.jpg",
+        "/assets/IMG_9414_16.9-scaled.jpg",
+        "/assets/IMG_9382_16.9-scaled.jpg"
       ],
       "fullDescription": "La présente opération s’inscrit dans le cadre de la réalisation de la nouvelle ligne de TER DAKAR-AIBD, initiée par le Ministère des Infrastructures, des Transports Terrestres et du Désenclavement dont la maitrise d'ouvrage déléguée est assurée par l'APIX. Elle consiste en la construction des sites de maintenance de la ligne et des 22 automotrices.\n\nLe SMR rassemble tous les programmes techniques, administratifs et de management nécessaires pour la mise en service, la gestion et l’exploitation du matériel roulant de la ligne. Le site regroupe donc les bâtiments suivants : atelier de maintenance, poste de commande, stockage, nettoyage, tour en fosse.\n\nLe SMI rassemble des bureaux, des bâtiments de stockage et de garage organisés en L autour d'une fosse permettant le garage de cinq trains lors de leur manutention\n\nL’ensemble des projets est composé d’une structure en double paroi de parpaings de ciment. Le vide entre les deux est ventilé pour éviter l’accumulation et la compression de l’air chaud et garder la paroi intérieure la plus fraiche possible. La réduction de la consommation de l’air conditionné dans les locaux de travail, se traduit aussi sur les façades exposées au soleil, par des percements qui améliorent la qualité de la lumière pénétrante, donc qui éclairent les espaces sans laisser passer les rayons solaires chauffant à l’intérieur des locaux.",
       "subtitle": "Construction du Site de Maintenance des Infrastructures (SMI) et du Site de Maintenance et de Remisage du Matériel Roulant (SMR)\n\nMission de maîtrise d'œuvre d'exécution",
@@ -1112,9 +1113,9 @@ const ProjectsSection = () => {
       "description": "Depuis son implantation au Sénégal en 2014, GA2D accompagne ATAC devenu AUCHAN, dans certains de ses projets de supermarchés et hypermarchés: Mairie (...",
       "gallery": [
         "/assets/Image-11-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/AUCHAN-MBOUR-01_16.9.png",
-        "https://ga2d.com/wp-content/uploads/2020/07/AUCHAN-MBOUR-02_16.9.png",
-        "https://ga2d.com/wp-content/uploads/2023/09/Image-09-scaled.jpg"
+        "/assets/AUCHAN-MBOUR-01_16.9.png",
+        "/assets/AUCHAN-MBOUR-02_16.9.png",
+        "/assets/Image-09-scaled.jpg"
       ],
       "fullDescription": "Depuis son implantation au Sénégal en 2014, GA2D accompagne ATAC devenu AUCHAN, dans certains de ses projets de supermarchés et hypermarchés: Mairie (2015), Gibraltar (2016), Mbour (2017), Sacré Cœur (2018), Yoff (2019), Mermoz (2020). Les surfaces varient entre 700 m² (Mairie) et 6800m² (Mermoz)",
       "subtitle": "Construction de supermarchés et hypermarchés pour la marque Auchan\n\nMission complète de maîtrise d'œuvre",
@@ -1133,7 +1134,7 @@ const ProjectsSection = () => {
       "description": "Le projet se place dans un programme de réhabilitation de bâtiments classés dans l’île de Gorée. Cette réhabilitation a pour but aussi de mettre en pl...",
       "gallery": [
         "/assets/P1020844_16.9-1-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/Centre-socio-culturel-04_16.9-2.jpg"
+        "/assets/Centre-socio-culturel-04_16.9-2.jpg"
       ],
       "fullDescription": "Le projet se place dans un programme de réhabilitation de bâtiments classés dans l’île de Gorée. Cette réhabilitation a pour but aussi de mettre en place des équipements nécessaires à l’amélioration de la vie des habitants de l’île. La création d’un centre Socio-Collectif entre dans ce programme. Le centre est aménagé dans l’ancien théâtre de verdure situé à l’angle de la rue Malavois et de la rue Boufflers, sur une parcelle de 759 m². Son état de ruine avancé, l’a rendu inutilisable. Sa réhabilitation a nécessité une reprise complète du bâtiment à partir des fondations.",
       "subtitle": "Réhabilitation et extension du théâtre de verdure en centre socio-collectif\n\nMission complète de maîtrise d'œuvre",
@@ -1152,7 +1153,7 @@ const ProjectsSection = () => {
       "description": "Le terrain de 1040 m² se situe à Sacré-Cœur dans l’enceinte du village SOS de Dakar. Il accueille un bâtiment R+2 dont le programme était destiné à l’...",
       "gallery": [
         "/assets/2_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/CD5560F9-64A5-45A0-91DC-F3771C10609B_16.9-scaled.jpg"
+        "/assets/CD5560F9-64A5-45A0-91DC-F3771C10609B_16.9-scaled.jpg"
       ],
       "fullDescription": "Le terrain de 1040 m² se situe à Sacré-Cœur dans l’enceinte du village SOS de Dakar. Il accueille un bâtiment R+2 dont le programme était destiné à l’origine à héberger des bureaux. Néanmoins, la flexibilité de l’aménagement qui prévoyait la possibilité de transformer chaque bureau en salle de cours, a poussé le maître d’ouvrage à reconvertir son bâtiment en université. Les espaces ont donc été requalifiés, les sanitaires agrandis et un amphithéâtre a été ajouté. Les volumes du projet traduisent la fonctionnalité du bâtiment et l’amphithéâtre émerge comme un signal qui traduit les nouveaux objectifs de SOS Sénégal : la volonté d’auto gestion.",
       "subtitle": "Construction d'un centre de formation pour l'association SOS villages d'enfants\n\nMission complète de maîtrise d'œuvre",
@@ -1171,8 +1172,8 @@ const ProjectsSection = () => {
       "description": "La position exceptionnelle du terrain, situé en haut de la falaise de Toubab Dialaw, a déterminé de nombreux aspects du projet. La villa en forme de U...",
       "gallery": [
         "/assets/2_16.9-1-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/4_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/1_16.9-1-scaled.jpg"
+        "/assets/4_16.9-scaled.jpg",
+        "/assets/1_16.9-1-scaled.jpg"
       ],
       "fullDescription": "La position exceptionnelle du terrain, situé en haut de la falaise de Toubab Dialaw, a déterminé de nombreux aspects du projet. La villa en forme de U autour d'une piscine, s'ouvre sur l'océan à l'ouest. Un séjour et 3 chambres donnent sur la piscine en préservant un accès privatif par la façade opposée. Un accès traversant la villa sépare pièces de vie et chambres et offre une perspective sur l'océan et son horizon.",
       "subtitle": "Construction d'une maison individuelle\n\nMission complète de maîtrise d'œuvre",
@@ -1191,9 +1192,9 @@ const ProjectsSection = () => {
       "description": "Le projet de la villa Fs s’inscrit sur un site tout en longueur se déployant depuis la route vers la plage de la Somone et marqué par la présence d’un...",
       "gallery": [
         "/assets/IMG_0270_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_0954_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_0597_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_0759_16.9-scaled.jpg"
+        "/assets/IMG_0954_16.9-scaled.jpg",
+        "/assets/IMG_0597_16.9-scaled.jpg",
+        "/assets/IMG_0759_16.9-scaled.jpg"
       ],
       "fullDescription": "Le projet de la villa Fs s’inscrit sur un site tout en longueur se déployant depuis la route vers la plage de la Somone et marqué par la présence d’un superbe baobab plusieurs fois centenaire. Le bâtiment est le résultat d’une volonté forte des maîtres d’ouvrage et maîtres d’œuvre de s’intégrer au mieux à cet environnement. Cette détermination s’est matérialisée par des choix respectueux : La dissociation des volumes et fonctions répartis sur le terrain pour préserver la végétation et l’intimité, le choix de matériaux bio-sourcés et naturels tels que la BTC, les enduits à la chaux, une charpente et des menuiseries bois, un sol en granito de coloris noir avec des agrégats de marbre blanc, etc…",
       "subtitle": "Construction d'une villa en BTC (Briques de Terre Compressée)\n\nMission de maîtrise d'œuvre d'exécution",
@@ -1212,8 +1213,8 @@ const ProjectsSection = () => {
       "description": "Le projet de la Villa Mm a été conçu pour s'insérer dans une concession comprenant 3 maisons complémentaires à construire, organisées autour d'une pis...",
       "gallery": [
         "/assets/67ABCD74-AC58-4C11-A833-8FAB631E24B9_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/8FE1058A-41D2-4086-8FFC-B55E01030FFA_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_7917-scaled.jpg"
+        "/assets/8FE1058A-41D2-4086-8FFC-B55E01030FFA_16.9-scaled.jpg",
+        "/assets/IMG_7917-scaled.jpg"
       ],
       "fullDescription": "Le projet de la Villa Mm a été conçu pour s'insérer dans une concession comprenant 3 maisons complémentaires à construire, organisées autour d'une piscine centrale. La Villa Mm, pour se préserver de la chaleur du site, est ceinturée par des coursives et terrasses sur ses deux niveaux qui la protègent de l'ensoleillement direct, et possède deux petits patios végétalisés procurant une source d'air rafraichissant. Son isolement a favorisé le choix de l'utilisation du solaire pour l’éclairage et le moteur de la piscine.",
       "subtitle": "Construction d'une maison individuelle\n\nMission complète de maîtrise d'œuvre",
@@ -1232,9 +1233,9 @@ const ProjectsSection = () => {
       "description": "Située dans le quartier résidentiel de Fann, à Dakar, la villa existante nécessitait une rénovation profonde. Le projet a permis de prolonger les espa...",
       "gallery": [
         "/assets/P1000153_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/Photo-C_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/P1000147_16.9.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/P1000143_16.9.jpg"
+        "/assets/Photo-C_16.9.jpg",
+        "/assets/P1000147_16.9.jpg",
+        "/assets/P1000143_16.9.jpg"
       ],
       "fullDescription": "Située dans le quartier résidentiel de Fann, à Dakar, la villa existante nécessitait une rénovation profonde. Le projet a permis de prolonger les espaces intérieurs sur l'extérieur, grâce à davantage de transparence et la continuité de sols intérieurs. La villa se développe sur des paliers successifs se prolongeant à l’extérieur sur les terrasses et dans la piscine elle-même.",
       "subtitle": "Construction d'une maison individuelle\n\nMission complète de maîtrise d'œuvre",
@@ -1253,8 +1254,8 @@ const ProjectsSection = () => {
       "description": "La villa Signare est une maison ancienne qui avait subit des rénovations préalables mettant en oeuvre des matériaux peu adaptés aux exigences de Gorée...",
       "gallery": [
         "/assets/IMG_0239_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/20200107_113653_16.9-scaled.jpg",
-        "https://ga2d.com/wp-content/uploads/2020/07/IMG_2264_16.9-scaled.jpg"
+        "/assets/20200107_113653_16.9-scaled.jpg",
+        "/assets/IMG_2264_16.9-scaled.jpg"
       ],
       "fullDescription": "La villa Signare est une maison ancienne qui avait subit des rénovations préalables mettant en oeuvre des matériaux peu adaptés aux exigences de Gorée et un bétonnage grossier. La réhabilitation a permis de réorganiser les espaces extérieurs en créant un nouvel escalier d'accès à l'étage, offrant davantage d'espaces plantés et une circulation mieux intégrée aux espaces intérieurs. Un belvédère accessible par une passerelle à partir de l'étage, a été créé au dessus d'un salon ouvert, permettant d'ouvrir un panorama sur la mer et la presqu'île de Dakar. Les matériaux, tels que la pierre utilisée au sol du rdc, l'enduit à la chaux sur les murs et le bois pour les ouvertures et les parquets de l'étage, ont remplacé le carrelage émaillé et les enduits de ciments.",
       "subtitle": "Réhabilitation d'une maison\n\nMission complète de maîtrise d'œuvre",
@@ -1268,6 +1269,13 @@ const ProjectsSection = () => {
   const filteredProjects = filter === 'tous'
     ? projects
     : projects.filter(p => p.category === filter);
+
+  const displayedProjects = filteredProjects.slice(0, visibleCount);
+
+  // Reset visibility when filter changes
+  useEffect(() => {
+    setVisibleCount(6);
+  }, [filter]);
 
   return (
     <section id="projets" className="py-20 lg:py-32 bg-gray-50">
@@ -1307,10 +1315,10 @@ const ProjectsSection = () => {
         {/* Projects Grid */}
         <motion.div
           layout
-          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
         >
           <AnimatePresence>
-            {filteredProjects.map((project) => (
+            {displayedProjects.map((project) => (
               <motion.div
                 key={project.id}
                 layout
@@ -1342,162 +1350,174 @@ const ProjectsSection = () => {
           </AnimatePresence>
         </motion.div>
 
-        {/* Project Modal */}
-        <AnimatePresence>
-          {selectedProject && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
-              onClick={() => {
-                setSelectedProject(null);
-                setModalImageIndex(0);
-              }}
+        {/* Load More Button */}
+        {visibleCount < filteredProjects.length && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setVisibleCount(prev => prev + 6)}
+              className="px-8 py-4 bg-black text-white font-semibold flex items-center gap-2 hover:bg-gray-800 transition-all group"
             >
-              <motion.div
-                initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                animate={{ opacity: 1, scale: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.9, y: 20 }}
-                className="bg-white max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl"
-                onClick={(e) => e.stopPropagation()}
-              >
-                {/* Header/Close Button */}
-                <div className="sticky top-0 z-10 bg-white/80 backdrop-blur-md p-4 flex justify-between items-center border-b">
-                  <h3 className="text-xl font-bold font-['Montserrat'] truncate">{selectedProject.title}</h3>
-                  <button
-                    onClick={() => {
-                      setSelectedProject(null);
-                      setModalImageIndex(0);
-                    }}
-                    className="p-2 hover:bg-gray-100 rounded-full transition-colors"
-                  >
-                    <X size={24} />
-                  </button>
+              Voir plus
+              <span className="group-hover:translate-y-1 transition-transform">↓</span>
+            </button>
+          </div>
+        )}
+      </div>
+      {/* Project Modal */}
+      <AnimatePresence>
+        {selectedProject && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+            onClick={() => {
+              setSelectedProject(null);
+              setModalImageIndex(0);
+            }}
+          >
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9, y: 20 }}
+              animate={{ opacity: 1, scale: 1, y: 0 }}
+              exit={{ opacity: 0, scale: 0.9, y: 20 }}
+              className="bg-white max-w-5xl w-full max-h-[90vh] overflow-y-auto rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Header/Close Button */}
+              <div className="sticky top-0 z-10 bg-white/80 backdrop-blur-md p-4 flex justify-between items-center border-b">
+                <h3 className="text-xl font-bold font-['Montserrat'] truncate">{selectedProject.title}</h3>
+                <button
+                  onClick={() => {
+                    setSelectedProject(null);
+                    setModalImageIndex(0);
+                  }}
+                  className="p-2 hover:bg-gray-100 rounded-full transition-colors"
+                >
+                  <X size={24} />
+                </button>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                {/* Gallery Section */}
+                <div className="relative aspect-video lg:aspect-square bg-gray-100">
+                  <AnimatePresence mode="wait">
+                    <motion.img
+                      key={modalImageIndex}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      src={selectedProject.gallery?.[modalImageIndex] || selectedProject.image}
+                      alt={selectedProject.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </AnimatePresence>
+
+                  {selectedProject.gallery && selectedProject.gallery.length > 1 && (
+                    <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">
+                      {selectedProject.gallery.map((_, idx) => (
+                        <button
+                          key={idx}
+                          onClick={() => setModalImageIndex(idx)}
+                          className={cn(
+                            "w-2 h-2 rounded-full transition-all",
+                            modalImageIndex === idx ? "bg-white w-6" : "bg-white/50"
+                          )}
+                        />
+                      ))}
+                    </div>
+                  )}
+
+                  {selectedProject.gallery && selectedProject.gallery.length > 1 && (
+                    <>
+                      <button
+                        onClick={() => setModalImageIndex(prev => (prev - 1 + selectedProject.gallery!.length) % selectedProject.gallery!.length)}
+                        className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/50 text-white rounded-full transition-all"
+                      >
+                        <ChevronLeft size={24} />
+                      </button>
+                      <button
+                        onClick={() => setModalImageIndex(next => (next + 1) % selectedProject.gallery!.length)}
+                        className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/50 text-white rounded-full transition-all"
+                      >
+                        <ChevronRight size={24} />
+                      </button>
+                    </>
+                  )}
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2">
-                  {/* Gallery Section */}
-                  <div className="relative aspect-video lg:aspect-square bg-gray-100">
-                    <AnimatePresence mode="wait">
-                      <motion.img
-                        key={modalImageIndex}
-                        initial={{ opacity: 0 }}
-                        animate={{ opacity: 1 }}
-                        exit={{ opacity: 0 }}
-                        src={selectedProject.gallery?.[modalImageIndex] || selectedProject.image}
-                        alt={selectedProject.title}
-                        className="w-full h-full object-cover"
-                      />
-                    </AnimatePresence>
+                {/* Info Section */}
+                <div className="p-8 lg:p-12 overflow-y-auto">
+                  <div className="mb-8">
+                    <p className="text-sm text-gray-500 uppercase tracking-widest mb-2">
+                      {categories.find(c => c.id === selectedProject.category)?.label}
+                    </p>
+                    <h2 className="text-3xl font-bold font-['Montserrat'] mb-2">
+                      {selectedProject.title}
+                    </h2>
+                    {selectedProject.subtitle && (
+                      <p className="text-gray-600 font-medium mb-4 whitespace-pre-line">
+                        {selectedProject.subtitle}
+                      </p>
+                    )}
+                    <div className="flex flex-wrap gap-4 text-gray-600 mb-6 border-b pb-6">
+                      <div className="flex items-center gap-2">
+                        <MapPin size={18} className="text-gray-400" />
+                        <span>{selectedProject.location}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <Calendar size={18} className="text-gray-400" />
+                        <span>{selectedProject.year}</span>
+                      </div>
+                    </div>
 
-                    {selectedProject.gallery && selectedProject.gallery.length > 1 && (
-                      <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">
-                        {selectedProject.gallery.map((_, idx) => (
-                          <button
-                            key={idx}
-                            onClick={() => setModalImageIndex(idx)}
-                            className={cn(
-                              "w-2 h-2 rounded-full transition-all",
-                              modalImageIndex === idx ? "bg-white w-6" : "bg-white/50"
-                            )}
-                          />
+                    {/* Metadata Table */}
+                    <div className="space-y-4 mb-8">
+                      {selectedProject.entreprise && (
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 text-sm border-b border-gray-100 pb-3">
+                          <span className="font-bold text-black uppercase tracking-wider">Entreprise</span>
+                          <span className="sm:col-span-2 text-gray-700 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: selectedProject.entreprise }} />
+                        </div>
+                      )}
+                      {selectedProject.maitrise_oeuvre && (
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 text-sm border-b border-gray-100 pb-3">
+                          <span className="font-bold text-black uppercase tracking-wider">Maîtrise d’œuvre</span>
+                          <span className="sm:col-span-2 text-gray-700 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: selectedProject.maitrise_oeuvre }} />
+                        </div>
+                      )}
+                      {selectedProject.surface && (
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 text-sm border-b border-gray-100 pb-3">
+                          <span className="font-bold text-black uppercase tracking-wider">Surface</span>
+                          <span className="sm:col-span-2 text-gray-700 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: selectedProject.surface }} />
+                        </div>
+                      )}
+                      {selectedProject.livraison && (
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 text-sm border-b border-gray-100 pb-3">
+                          <span className="font-bold text-black uppercase tracking-wider">Livraison</span>
+                          <span className="sm:col-span-2 text-gray-700 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: selectedProject.livraison }} />
+                        </div>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="space-y-6 text-gray-700 leading-relaxed">
+                    {selectedProject.fullDescription ? (
+                      <div className="prose prose-gray max-w-none">
+                        {selectedProject.fullDescription.split('\n').map((para, i) => (
+                          para.trim() && <p key={i} className="mb-4">{para}</p>
                         ))}
                       </div>
-                    )}
-
-                    {selectedProject.gallery && selectedProject.gallery.length > 1 && (
-                      <>
-                        <button
-                          onClick={() => setModalImageIndex(prev => (prev - 1 + selectedProject.gallery!.length) % selectedProject.gallery!.length)}
-                          className="absolute left-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/50 text-white rounded-full transition-all"
-                        >
-                          <ChevronLeft size={24} />
-                        </button>
-                        <button
-                          onClick={() => setModalImageIndex(next => (next + 1) % selectedProject.gallery!.length)}
-                          className="absolute right-4 top-1/2 -translate-y-1/2 p-2 bg-black/30 hover:bg-black/50 text-white rounded-full transition-all"
-                        >
-                          <ChevronRight size={24} />
-                        </button>
-                      </>
-                    )}
-                  </div>
-
-                  {/* Info Section */}
-                  <div className="p-8 lg:p-12 overflow-y-auto">
-                    <div className="mb-8">
-                      <p className="text-sm text-gray-500 uppercase tracking-widest mb-2">
-                        {categories.find(c => c.id === selectedProject.category)?.label}
+                    ) : (
+                      <p className="text-lg font-medium text-black">
+                        {selectedProject.description}
                       </p>
-                      <h2 className="text-3xl font-bold font-['Montserrat'] mb-2">
-                        {selectedProject.title}
-                      </h2>
-                      {selectedProject.subtitle && (
-                        <p className="text-gray-600 font-medium mb-4 whitespace-pre-line">
-                          {selectedProject.subtitle}
-                        </p>
-                      )}
-                      <div className="flex flex-wrap gap-4 text-gray-600 mb-6 border-b pb-6">
-                        <div className="flex items-center gap-2">
-                          <MapPin size={18} className="text-gray-400" />
-                          <span>{selectedProject.location}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <Calendar size={18} className="text-gray-400" />
-                          <span>{selectedProject.year}</span>
-                        </div>
-                      </div>
-
-                      {/* Metadata Table */}
-                      <div className="space-y-4 mb-8">
-                        {selectedProject.entreprise && (
-                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 text-sm border-b border-gray-100 pb-3">
-                            <span className="font-bold text-black uppercase tracking-wider">Entreprise</span>
-                            <span className="sm:col-span-2 text-gray-700 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: selectedProject.entreprise }} />
-                          </div>
-                        )}
-                        {selectedProject.maitrise_oeuvre && (
-                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 text-sm border-b border-gray-100 pb-3">
-                            <span className="font-bold text-black uppercase tracking-wider">Maîtrise d’œuvre</span>
-                            <span className="sm:col-span-2 text-gray-700 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: selectedProject.maitrise_oeuvre }} />
-                          </div>
-                        )}
-                        {selectedProject.surface && (
-                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 text-sm border-b border-gray-100 pb-3">
-                            <span className="font-bold text-black uppercase tracking-wider">Surface</span>
-                            <span className="sm:col-span-2 text-gray-700 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: selectedProject.surface }} />
-                          </div>
-                        )}
-                        {selectedProject.livraison && (
-                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-1 sm:gap-4 text-sm border-b border-gray-100 pb-3">
-                            <span className="font-bold text-black uppercase tracking-wider">Livraison</span>
-                            <span className="sm:col-span-2 text-gray-700 whitespace-pre-line" dangerouslySetInnerHTML={{ __html: selectedProject.livraison }} />
-                          </div>
-                        )}
-                      </div>
-                    </div>
-
-                    <div className="space-y-6 text-gray-700 leading-relaxed">
-                      {selectedProject.fullDescription ? (
-                        <div className="prose prose-gray max-w-none">
-                          {selectedProject.fullDescription.split('\n').map((para, i) => (
-                            para.trim() && <p key={i} className="mb-4">{para}</p>
-                          ))}
-                        </div>
-                      ) : (
-                        <p className="text-lg font-medium text-black">
-                          {selectedProject.description}
-                        </p>
-                      )}
-                    </div>
+                    )}
                   </div>
                 </div>
-              </motion.div>
+              </div>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

@@ -1,36 +1,17 @@
 @import "tailwindcss";
 
-:root {
-  /* Palette GA2D - Couleurs neutres avec touches locales */
-  --color-cream: #F5F2ED;
-  --color-sand: #E8E2D9;
-  --color-ochre: #C4A35A;
-  --color-ochre-dark: #A68B4B;
-  --color-teal: #2A5A5B;
-  --color-teal-dark: #1E4142;
-  --color-charcoal: #2D2D2D;
-  --color-gray: #6B6B6B;
-  --color-gray-light: #9B9B9B;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
-  background-color: var(--color-cream);
-  color: var(--color-charcoal);
-  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
-  font-weight: 600;
 }
 
 /* Custom scrollbar */
@@ -39,254 +20,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-sand);
+  background: #f1f1f1;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-ochre);
+  background: #333;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-ochre-dark);
-}
-
-/* Animation utilities */
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInRight {
-  from {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out forwards;
-}
-
-/* Hero gradient overlay */
-.hero-gradient {
-  background: linear-gradient(135deg, rgba(45, 45, 45, 0.7) 0%, rgba(42, 90, 91, 0.6) 100%);
-}
-
-/* Card hover effects */
-.project-card {
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-/* Button styles */
-.btn-primary {
-  background-color: var(--color-ochre);
-  color: white;
-  padding: 14px 32px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  transition: all 0.3s ease;
-}
-
-.btn-primary:hover {
-  background-color: var(--color-ochre-dark);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(196, 163, 90, 0.3);
-}
-
-.btn-secondary {
-  background-color: transparent;
-  color: var(--color-teal);
-  border: 2px solid var(--color-teal);
-  padding: 12px 30px;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.btn-secondary:hover {
-  background-color: var(--color-teal);
-  color: white;
-}
-
-/* Methodology timeline */
-.methodology-step {
-  position: relative;
-}
-
-.methodology-step::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 60px;
-  width: 2px;
-  height: calc(100% - 60px);
-  background: linear-gradient(to bottom, var(--color-ochre), var(--color-teal));
-  transform: translateX(-50%);
-}
-
-@media (max-width: 768px) {
-  .methodology-step::before {
-    left: 20px;
-  }
-}
-
-/* Image overlay for projects */
-.image-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(45, 45, 45, 0.9) 0%, rgba(45, 45, 45, 0.3) 50%, transparent 100%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.project-card:hover .image-overlay {
-  opacity: 1;
-}
-
-/* Navigation active state */
-.nav-link {
-  position: relative;
-}
-
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--color-ochre);
-  transition: width 0.3s ease;
-}
-
-.nav-link:hover::after,
-.nav-link.active::after {
-  width: 100%;
-}
-
-/* Team card hover */
-.team-card {
-  transition: all 0.4s ease;
-}
-
-.team-card:hover {
-  transform: translateY(-10px);
-}
-
-.team-card:hover .team-photo {
-  transform: scale(1.05);
-}
-
-.team-photo {
-  transition: transform 0.6s ease;
-}
-
-/* Blog card */
-.blog-card {
-  transition: all 0.4s ease;
-}
-
-.blog-card:hover {
-  transform: translateY(-6px);
-}
-
-.blog-card:hover .blog-image {
-  transform: scale(1.08);
-}
-
-.blog-image {
-  transition: transform 0.6s ease;
-}
-
-/* Filter button active state */
-.filter-btn.active {
-  background-color: var(--color-teal);
-  color: white;
-}
-
-/* Contact form styles */
-.form-input {
-  border: 1px solid #D1D1D1;
-  transition: all 0.3s ease;
-}
-
-.form-input:focus {
-  border-color: var(--color-ochre);
-  box-shadow: 0 0 0 3px rgba(196, 163, 90, 0.1);
-  outline: none;
-}
-
-/* Loader animation */
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-.loading-spinner {
-  animation: spin 1s linear infinite;
-}
-
-/* Section padding utilities */
-.section-padding {
-  padding: 100px 0;
-}
-
-@media (max-width: 768px) {
-  .section-padding {
-    padding: 60px 0;
-  }
-}
-
-/* Decorative elements */
-.deco-line {
-  width: 60px;
-  height: 3px;
-  background-color: var(--color-ochre);
-}
-
-/* Smooth reveal animation */
-.reveal {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
+  background: #000;
 }
