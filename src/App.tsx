@@ -104,7 +104,7 @@ const Navigation = () => {
   return (
     <nav className={cn(
       "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      scrolled ? "bg-white/95 backdrop-blur-md shadow-sm py-4" : "bg-transparent py-6"
+      scrolled ? "bg-white/95 backdrop-blur-md shadow-md py-4" : "bg-transparent py-6"
     )}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between">
@@ -1278,7 +1278,7 @@ const ProjectsSection = () => {
   }, [filter]);
 
   return (
-    <section id="projets" className="py-20 lg:py-32 bg-gray-50">
+    <section id="projets" className="py-20 lg:py-32 bg-gray-100/50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -1326,7 +1326,7 @@ const ProjectsSection = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.3 }}
-                className="group cursor-pointer relative overflow-hidden bg-white"
+                className="group cursor-pointer relative overflow-hidden bg-white shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500"
                 onClick={() => setSelectedProject(project)}
               >
                 <div className="relative aspect-[4/3] overflow-hidden">
@@ -1590,7 +1590,7 @@ const TeamSection = () => {
   ];
 
   return (
-    <section id="equipe" className="py-20 lg:py-32 bg-white">
+    <section id="equipe" className="py-20 lg:py-32 bg-gray-50/50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -1619,9 +1619,9 @@ const TeamSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1 }}
-              className="text-center"
+              className="text-center bg-white p-8 shadow-sm border border-gray-100/50 transition-all hover:shadow-md"
             >
-              <div className="relative overflow-hidden mb-6 mx-auto w-48 h-48 rounded-full">
+              <div className="relative overflow-hidden mb-6 mx-auto w-48 h-48 rounded-full shadow-inner">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -1638,7 +1638,7 @@ const TeamSection = () => {
         </div>
 
         {/* Support Team */}
-        <div className="bg-gray-50 p-8 lg:p-12 mb-16">
+        <div className="bg-white p-8 lg:p-12 mb-16 shadow-sm border border-gray-100">
           <h3 className="text-2xl font-bold text-black font-['Montserrat'] mb-8 text-center">
             Équipe de support
           </h3>
@@ -1691,7 +1691,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 lg:py-32 bg-gray-50">
+    <section id="contact" className="py-20 lg:py-32 bg-gray-100/50 border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <motion.div
@@ -1717,7 +1717,7 @@ const ContactSection = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="bg-white p-8 lg:p-12"
+            className="bg-white p-8 lg:p-12 shadow-lg border border-gray-50"
           >
             <h3 className="text-2xl font-bold text-black font-['Montserrat'] mb-6">
               Envoyez-nous un message
@@ -1801,7 +1801,7 @@ const ContactSection = () => {
             className="space-y-8"
           >
             {/* Appointment CTA */}
-            <div className="bg-black p-8 text-white">
+            <div className="bg-black p-8 text-white shadow-xl">
               <h3 className="text-2xl font-bold font-['Montserrat'] mb-4">
                 Prendre Rendez-vous
               </h3>
@@ -1822,7 +1822,7 @@ const ContactSection = () => {
             </div>
 
             {/* Office Info */}
-            <div className="bg-white p-8">
+            <div className="bg-white p-8 shadow-md border border-gray-50">
               <h4 className="text-xl font-bold text-black font-['Montserrat'] mb-6 flex items-center gap-2">
                 <MapPin size={20} />
                 Nos Coordonnées
@@ -1862,7 +1862,7 @@ const ContactSection = () => {
             </div>
 
             {/* Map placeholder */}
-            <div className="bg-gray-200 h-64 relative overflow-hidden">
+            <div className="bg-gray-200 h-64 relative overflow-hidden shadow-inner">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15438.307!2d-17.47!3d14.7!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1725b8b98b58f%3A0x8670c5f4909a1ac6!2sPoint%20E%2C%20Dakar%2C%20S%C3%A9n%C3%A9gal!5e0!3m2!1sfr!2ssn!4v1700000000000!5m2!1sfr!2ssn"
                 width="100%"
